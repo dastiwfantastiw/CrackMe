@@ -3593,7 +3593,7 @@ BYTE* PE = new BYTE [dwSize]
 	PROCESS_INFORMATION PI;
 	if (CreateProcess(L"apof.bin", NULL, NULL, NULL, FALSE, NULL, NULL, NULL, &CIF, &PI))
 	{
-		CHAR PipeName[] = "\\\\.\\pipe\\KasperskyLabOffZone";
+		CHAR PipeName[] = "\\\\.\\pipe\\MyPipe";
 		HANDLE hNamedPipe = CreateNamedPipeA(
 			PipeName,
 			PIPE_ACCESS_DUPLEX,
